@@ -1,0 +1,23 @@
+<div class='body-container'>
+
+  <h1 class='heading'>Google Oauth Example</h1>
+
+  <a class='google-signin' href='/auth/google'>
+    <img src='/assets/img/google-signin.png' alt='Sign in with google' />
+  </a>
+
+  {{#if user}}
+
+    <div class='card user-card'>
+      <div class='card-body'>
+        <h5 class='card-title'>User Logged In: {{user.profile.displayName}}</h5>
+        <p class='card-text'><strong>Access Token:
+          </strong>{{user.accessToken}}</p>
+      </div>
+
+    </div>
+
+    <a class='btn btn-danger logout-btn' href='/auth/logout'>Logout</a>
+  {{/if}}
+
+</div>
